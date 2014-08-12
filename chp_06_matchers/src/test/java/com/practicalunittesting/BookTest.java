@@ -20,7 +20,7 @@ public class BookTest {
     public void testConstructor() {
         book = new Book(TITLE);
         assertNotNull(book.getTitle());
-        assertTrue(book.getTitle() != "");
+        assertTrue(!book.getTitle().isEmpty());
         assertEquals(book.getTitle(), TITLE);
     }
     
