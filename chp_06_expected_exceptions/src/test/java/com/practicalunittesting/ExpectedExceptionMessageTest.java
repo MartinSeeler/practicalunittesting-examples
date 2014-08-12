@@ -18,7 +18,7 @@ public class ExpectedExceptionMessageTest {
 
     @Test(dataProvider = "emptyNumbers", expectedExceptions = IllegalArgumentException.class,
             expectedExceptionsMessageRegExp = ".*empty.*" )
-    public void shouldThrowIAEForEmptyNumber(String emptyNumber) {
+    public void shouldThrowIAEForEmptyNumber(final String emptyNumber) {
         new Phone(emptyNumber);
     }
 
@@ -29,7 +29,7 @@ public class ExpectedExceptionMessageTest {
 
     @Test(dataProvider = "numbersWithPlus", expectedExceptions = IllegalArgumentException.class,
             expectedExceptionsMessageRegExp = ".*plus.*" )
-    public void shouldThrowIAEForPlusPrefixedNumber(String numberWithPlus) {
+    public void shouldThrowIAEForPlusPrefixedNumber(final String numberWithPlus) {
         new Phone(numberWithPlus);
     }
 }

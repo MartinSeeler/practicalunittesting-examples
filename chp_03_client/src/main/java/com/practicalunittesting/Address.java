@@ -10,7 +10,7 @@ public class Address {
 
     private final String street;
 
-    public Address(String street) {
+    public Address(final String street) {
         this.street = street;
     }
 }

@@ -23,17 +23,17 @@ public class TDDNarrowingShortTest {
         return phones;
         }
 
-        public void addPhone(String s) {
+        public void addPhone(final String s) {
             phones.add(s);
         }
     }
 
     @Test
     public void shouldReturnUsersPhone() {
-        User user = new User();
+        final User user = new User();
         user.addPhone("123 456 789");
 
-        List<String> phones = user.getPhones();
+        final List<String> phones = user.getPhones();
 
         assertNotNull(phones);
         assertFalse(phones.isEmpty());

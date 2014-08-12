@@ -39,19 +39,19 @@ public class HelloRedesignedTest {
     }
 
     @Test(dataProvider = "morningHours")
-    public void shouldSayGoodMorningInTheMorning(int hour) {
+    public void shouldSayGoodMorningInTheMorning(final int hour) {
         when(timeProvider.getTime()).thenReturn(getCalendar(hour));
         assertEquals(hello.sayHello(), "Good Morning!");
     }
 
     @Test(dataProvider = "afternoonHours")
-    public void shouldSayGoodAfternoonInTheAfternoon(int hour) {
+    public void shouldSayGoodAfternoonInTheAfternoon(final int hour) {
         when(timeProvider.getTime()).thenReturn(getCalendar(hour));
         assertEquals(hello.sayHello(), "Good Afternoon!");
     }
 
-    private Calendar getCalendar(int hour) {
-        Calendar cal = Calendar.getInstance();
+    private Calendar getCalendar(final int hour) {
+        final Calendar cal = Calendar.getInstance();
         cal.set(Calendar.HOUR_OF_DAY, hour);
         return cal;
     }

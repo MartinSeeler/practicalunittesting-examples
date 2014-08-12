@@ -13,7 +13,7 @@ public class DiscountCalculator {
     private static final double ONE_PERCENT = 0.01d;
     private static final double NO_DISCOUNT = 0.0d;
 
-    public static double calculateDiscount(double value) {
+    public static double calculateDiscount(final double value) {
         if (value >= 5000) {
             return THREE_PERCENT;
         }

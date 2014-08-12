@@ -16,8 +16,8 @@ public class MySutPartialTest {
 
     @Test
     public void testMyMethod() {
-        MyPartialSut sut = spy(new MyPartialSut());
-        MyCollaborator collaborator = mock(MyCollaborator.class);
+        final MyPartialSut sut = spy(new MyPartialSut());
+        final MyCollaborator collaborator = mock(MyCollaborator.class);
 
         doReturn(collaborator).when(sut).createCollaborator();
         //when(sut.createCollaborator()).thenReturn(collaborator);

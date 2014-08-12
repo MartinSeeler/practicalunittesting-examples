@@ -11,7 +11,7 @@ import com.practicalunittesting.MyCollaborator;
 public class MyRefactoredSut {
 
     public boolean myMethod() {
-        MyCollaborator collaborator = createCollaborator();
+        final MyCollaborator collaborator = createCollaborator();
         // some behaviour worth testing here which uses collaborator
        if (collaborator.someMethod()) {
             return true;

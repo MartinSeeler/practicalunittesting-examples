@@ -11,12 +11,12 @@ public class MessengerTest {
 
     @Test
     public void shouldSendEmail() {
-        Template template = mock(Template.class);
-        Client client = mock(Client.class);
-        MailServer mailServer = mock(MailServer.class);
-        TemplateEngine templateEngine = mock(TemplateEngine.class);
+        final Template template = mock(Template.class);
+        final Client client = mock(Client.class);
+        final MailServer mailServer = mock(MailServer.class);
+        final TemplateEngine templateEngine = mock(TemplateEngine.class);
 
-        Messenger sut = new Messenger(mailServer, templateEngine);
+        final Messenger sut = new Messenger(mailServer, templateEngine);
 
         when(client.getEmail()).thenReturn(CLIENT_EMAIL);
         when(templateEngine.prepareMessage(template, client)).thenReturn(MSG_CONTENT);

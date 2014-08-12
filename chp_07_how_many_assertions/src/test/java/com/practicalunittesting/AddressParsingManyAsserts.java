@@ -14,7 +14,7 @@ import static org.testng.Assert.assertEquals;
 public class AddressParsingManyAsserts {
 
     public void testAddressParsing() {
-        Address anAddress = new Address("ADDR1$CITY IL 60563$COUNTRY");
+        final Address anAddress = new Address("ADDR1$CITY IL 60563$COUNTRY");
         assertEquals(anAddress.getAddr1(), "ADDR1");
         assertEquals(anAddress.getCsp(), "CITY IL 60563");
         assertEquals(anAddress.getCountry(), "COUNTRY");

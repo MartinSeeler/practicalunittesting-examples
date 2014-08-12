@@ -41,7 +41,7 @@ public class BookFestTest {
 
     public void booksWithSameTitlesShouldBeEqual() {
         book = new Book(TITLE);
-        Book otherBook = new Book(TITLE);
+        final Book otherBook = new Book(TITLE);
         assertThat(book).isEqualTo(otherBook);
     }
 }

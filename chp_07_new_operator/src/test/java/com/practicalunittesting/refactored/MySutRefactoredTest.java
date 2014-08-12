@@ -26,7 +26,7 @@ public class MySutRefactoredTest {
 
     @Test
     public void testMyMethod() {
-        MyRefactoredSut sut = new MyRefactoredSutSubclassed();
+        final MyRefactoredSut sut = new MyRefactoredSutSubclassed();
          collaborator= mock(MyCollaborator.class);
 
         when(collaborator.someMethod()).thenReturn(true);

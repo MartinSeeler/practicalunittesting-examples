@@ -25,11 +25,11 @@ public class ReadExcelTest {
 
     @DataProvider
     public Iterator<Object[]> discountData() throws IOException, BiffException {
-        ArrayList<Object[]> myEntries = new ArrayList<Object[]>();
-        File inputWorkbook = new File("src/test/resources/financial.xls");
+        final ArrayList<Object[]> myEntries = new ArrayList<Object[]>();
+        final File inputWorkbook = new File("src/test/resources/financial.xls");
         String value, discount;
-        Workbook w = Workbook.getWorkbook(inputWorkbook);
-        Sheet sheet = w.getSheet(0);
+        final Workbook w = Workbook.getWorkbook(inputWorkbook);
+        final Sheet sheet = w.getSheet(0);
         for (int row = 1; row < sheet.getRows(); row++) {
             value= sheet.getCell(0, row).getContents();
             discount = sheet.getCell(1, row).getContents();
@@ -39,7 +39,7 @@ public class ReadExcelTest {
     }
 
     @Test(dataProvider = "discountData")
-    public void shouldCalculateDiscount(String value,String discount) {
+    public void shouldCalculateDiscount(final String value, final String discount) {
         assertEquals(DiscountCalculator.calculateDiscount(Double.parseDouble(value)),
                 Double.parseDouble(discount));
     }

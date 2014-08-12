@@ -14,7 +14,7 @@ public class IDEQuicFixTest {
 
     @Test
     public void testConstructor() {
-        Client client = new Client();
+        final Client client = new Client();
         client.setAge(20);
         assertEquals(client.getAge(), 20);
     }

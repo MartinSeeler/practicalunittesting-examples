@@ -13,9 +13,9 @@ public class FinancialService {
     private ClientDAO clientDAO;
     private Calculator calculator;
 
-    public BigDecimal calculateBonus(long clientId, BigDecimal payment) {
-        Short clientType = clientDAO.getClientType(clientId);
-        BigDecimal bonus = calculator.calculateBonus(clientType, payment);
+    public BigDecimal calculateBonus(final long clientId, final BigDecimal payment) {
+        final Short clientType = clientDAO.getClientType(clientId);
+        final BigDecimal bonus = calculator.calculateBonus(clientType, payment);
         clientDAO.saveBonusHistory(clientId, bonus);
         return bonus;
     }

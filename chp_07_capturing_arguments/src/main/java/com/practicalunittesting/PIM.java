@@ -14,14 +14,14 @@ public class PIM {
 
     private final Calendar calendar;
 
-    public PIM(Calendar calendar) {
+    public PIM(final Calendar calendar) {
         this.calendar = calendar;
     }
 
-    public void addMeeting(Date startDate, int durationInMinutes) {
-        Date endDate = new Date(startDate.getTime()
+    public void addMeeting(final Date startDate, final int durationInMinutes) {
+        final Date endDate = new Date(startDate.getTime()
                 + MILLIS_IN_MINUTE * durationInMinutes);
-        Meeting meeting = new Meeting(startDate, endDate);
+        final Meeting meeting = new Meeting(startDate, endDate);
         calendar.addEvent(meeting);
     }
 

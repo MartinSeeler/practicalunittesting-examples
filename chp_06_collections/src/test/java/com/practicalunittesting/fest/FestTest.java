@@ -40,7 +40,7 @@ public class FestTest {
     }
 
     public void mapUtilityMethods() {
-        HashMap<String, Integer> map = new LinkedHashMap<String, Integer>();
+        final HashMap<String, Integer> map = new LinkedHashMap<String, Integer>();
         map.put("a", 2);
         map.put("b", 3);
         assertThat(map).isNotNull().isNotEmpty()
@@ -49,7 +49,7 @@ public class FestTest {
     }
     
     public void lookingIntoProperties() {
-        Collection<Book> books = new HashSet<Book>();
+        final Collection<Book> books = new HashSet<Book>();
         books.add(new Book("Homer", "Odyssey"));
         books.add(new Book("J.R.R. Tolkien", "Hobbit"));
         assertThat(books).onProperty("title").contains("Hobbit");

@@ -12,25 +12,25 @@ import org.fest.assertions.GenericAssert;
  */
 public class BookAssert extends GenericAssert<BookAssert, Book> {
 
-    public BookAssert(Book actual) {
+    public BookAssert(final Book actual) {
         super(BookAssert.class, actual);
     }
 
-    public static BookAssert assertThat(Book actual) {
+    public static BookAssert assertThat(final Book actual) {
         return new BookAssert(actual);
     }
 
-    public BookAssert hasTitle(String title) {
+    public BookAssert hasTitle(final String title) {
         isNotNull();
-        String errorMessage = String.format("Expected book's title to be <%s> but was <%s>",title, actual.getTitle());
+        final String errorMessage = String.format("Expected book's title to be <%s> but was <%s>",title, actual.getTitle());
         Assertions.assertThat(actual.getTitle()).overridingErrorMessage(errorMessage).isEqualTo(title);
         Assertions.assertThat(actual.getTitle().equals(title)).overridingErrorMessage(errorMessage).isTrue();
         return this;
     }
 
-    public BookAssert isWrittenIn(String language) {
+    public BookAssert isWrittenIn(final String language) {
         isNotNull();
-        String errorMessage = String.format("Expected that book was written in <%s> but was <%s>",language, actual.getLanguage());
+        final String errorMessage = String.format("Expected that book was written in <%s> but was <%s>",language, actual.getLanguage());
         Assertions.assertThat(actual.getLanguage()).overridingErrorMessage(errorMessage).isEqualTo(language);
         Assertions.assertThat(actual.getLanguage().equals(language)).overridingErrorMessage(errorMessage).isTrue();
         return this;

@@ -25,7 +25,7 @@ public class TDDNarrowingTest {
         return phones;
         }
 
-        public void addPhone(String s) {
+        public void addPhone(final String s) {
             phones.add(s);
         }
     }
@@ -45,7 +45,7 @@ public class TDDNarrowingTest {
     @Test(dependsOnMethods = "newUserHasNoPhone")
     public void shouldReturnAllPhonesOfUser() {
         user.addPhone("123 456 789");
-        List<String> phones = user.getPhones();
+        final List<String> phones = user.getPhones();
         assertNotNull(phones);
         assertFalse(phones.isEmpty());
         assertEquals(phones.size(), 1);

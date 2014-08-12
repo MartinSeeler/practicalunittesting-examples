@@ -10,7 +10,7 @@ public class Phone {
     private final boolean mobile;
     private final String number;
 
-    public Phone(String number, boolean mobile) {
+    public Phone(final String number, final boolean mobile) {
         this.number = number;
         this.mobile = mobile;
     }
@@ -20,11 +20,11 @@ public class Phone {
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(final Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Phone phone = (Phone) o;
+        final Phone phone = (Phone) o;
 
         if (mobile != phone.mobile) return false;
         if (number != null ? !number.equals(phone.number) : phone.number != null) return false;

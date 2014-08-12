@@ -7,7 +7,7 @@ package com.practicalunittesting;
  * @author Tomek Kaczanowski
  */
 public class Address {
-    public Address(String strAddress) {
+    public Address(final String strAddress) {
 
     }
 

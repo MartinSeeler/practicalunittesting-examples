@@ -15,8 +15,8 @@ import static org.testng.Assert.assertEquals;
 public class MockitoMatchersTest {
 
     public void useOfMatchers() {
-        UserDAO userDAO = mock(UserDAO.class);
-        User user = new User();
+        final UserDAO userDAO = mock(UserDAO.class);
+        final User user = new User();
         when(userDAO.getUser(anyInt())).thenReturn(user);
 
         assertEquals(userDAO.getUser(1), user);

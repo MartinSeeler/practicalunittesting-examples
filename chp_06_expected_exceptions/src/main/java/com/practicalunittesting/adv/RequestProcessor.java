@@ -7,6 +7,6 @@ package com.practicalunittesting.adv;
  * @author Tomek Kaczanowski
  */
 public class RequestProcessor {
-    public void process(Request request) {
+    public void process(final Request request) {
     }
 }

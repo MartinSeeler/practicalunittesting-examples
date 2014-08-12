@@ -22,14 +22,14 @@ import static org.testng.Assert.assertNull;
 public class MockitoHamcrestMatchersTest {
 
     public void useOfHamcrestMatchers() {
-        User user = new User();
-        UserDAO userDAO = mock(UserDAO.class);
+        final User user = new User();
+        final UserDAO userDAO = mock(UserDAO.class);
 
         when(userDAO.getUserByProperties(argThat(hasEntry("id", "2")))).thenReturn(user);
 
         assertNull(userDAO.getUserByProperties(new HashMap<String, String>()));
 
-        Map<String, String> properties = new HashMap<String, String>();
+        final Map<String, String> properties = new HashMap<String, String>();
         properties.put("id", "2");
 
         assertEquals(userDAO.getUserByProperties(properties), user);

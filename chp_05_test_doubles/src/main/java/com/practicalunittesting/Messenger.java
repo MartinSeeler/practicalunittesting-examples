@@ -11,13 +11,13 @@ public class Messenger {
     private final TemplateEngine templateEngine;
     private final MailServer mailServer;
 
-    public Messenger(MailServer mailServer, TemplateEngine templateEngine) {
+    public Messenger(final MailServer mailServer, final TemplateEngine templateEngine) {
         this.mailServer = mailServer;
         this.templateEngine = templateEngine;
     }
 
-    public void sendMessage(Client client, Template template) {
-        String msgContent = templateEngine.prepareMessage(template, client);
+    public void sendMessage(final Client client, final Template template) {
+        final String msgContent = templateEngine.prepareMessage(template, client);
         mailServer.send(client.getEmail(), msgContent);
     }
 }

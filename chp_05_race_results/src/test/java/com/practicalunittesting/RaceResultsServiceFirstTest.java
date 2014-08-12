@@ -15,9 +15,9 @@ import static org.mockito.Mockito.verify;
 public class RaceResultsServiceFirstTest {
 
     public void subscribedClientShouldReceiveMessage() {
-        RaceResultsService raceResults = new RaceResultsService();
-        Client client = mock(Client.class);
-        Message message = mock(Message.class);
+        final RaceResultsService raceResults = new RaceResultsService();
+        final Client client = mock(Client.class);
+        final Message message = mock(Message.class);
 
         raceResults.addSubscriber(client);
         raceResults.send(message);

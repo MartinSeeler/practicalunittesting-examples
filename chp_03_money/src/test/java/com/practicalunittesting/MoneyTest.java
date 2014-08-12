@@ -15,7 +15,7 @@ import static org.testng.Assert.assertEquals;
 public class MoneyTest {
 
     public void testConstructor() {
-        Money money = new Money(10, "USD");
+        final Money money = new Money(10, "USD");
         assertEquals(money.getAmount(), 10);
         //assertEquals(money.getAmount(), 15);
         //assertEquals(money.getAmount(), 10, "wrong amount of money");
@@ -31,9 +31,9 @@ public class MoneyTest {
     }
 
     @Test(dataProvider = "getMoney")
-    public void shouldAddSameCurrencies(Money a, Money b,
-                                        int expectedResult) {
-        Money result = a.add(b);
+    public void shouldAddSameCurrencies(final Money a, final Money b,
+                                        final int expectedResult) {
+        final Money result = a.add(b);
         assertEquals(result.getAmount(), expectedResult);
     }
 

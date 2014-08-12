@@ -11,7 +11,7 @@ import com.practicalunittesting.MyCollaborator;
 public class MySut {
 
     public void myMethod() {
-        MyCollaborator collaborator = new MyCollaborator();
+        final MyCollaborator collaborator = new MyCollaborator();
         // some behaviour worth testing here which uses collaborator
     }
 }

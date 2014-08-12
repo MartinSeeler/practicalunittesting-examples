@@ -15,9 +15,9 @@ import static org.mockito.Mockito.verify;
 public class RaceResultsServiceFirstAndSecondTest {
 
     public void subscribedClientShouldReceiveMessage() {
-        RaceResultsService raceResults = new RaceResultsService();
-        Client client = mock(Client.class);
-        Message message = mock(Message.class);
+        final RaceResultsService raceResults = new RaceResultsService();
+        final Client client = mock(Client.class);
+        final Message message = mock(Message.class);
 
         raceResults.addSubscriber(client);
         raceResults.send(message);
@@ -26,10 +26,10 @@ public class RaceResultsServiceFirstAndSecondTest {
     }
 
     public void messageShouldBeSentToAllSubscribedClients() {
-        RaceResultsService raceResults = new RaceResultsService();
-        Client clientA = mock(Client.class);
-        Client clientB = mock(Client.class);
-        Message message = mock(Message.class);
+        final RaceResultsService raceResults = new RaceResultsService();
+        final Client clientA = mock(Client.class);
+        final Client clientB = mock(Client.class);
+        final Message message = mock(Message.class);
 
         raceResults.addSubscriber(clientA);
         raceResults.addSubscriber(clientB);

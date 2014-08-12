@@ -26,8 +26,8 @@ public class SetTest {
     }
 
     public void sameSets() {
-        String s1 = "s1";
-        String s2 = "s2";
+        final String s1 = "s1";
+        final String s2 = "s2";
 
         setA.add(s1);
         setA.add(s2);

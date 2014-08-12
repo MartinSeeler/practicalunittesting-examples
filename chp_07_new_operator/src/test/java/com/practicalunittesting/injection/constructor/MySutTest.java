@@ -15,8 +15,8 @@ public class MySutTest {
 
     @Test
     public void testMyMethod() {
-        MyCollaborator collaborator = mock(MyCollaborator.class);
-        MySut sut = new MySut(collaborator);
+        final MyCollaborator collaborator = mock(MyCollaborator.class);
+        final MySut sut = new MySut(collaborator);
 
         // normal Mockito stubbing/test spying test
     }

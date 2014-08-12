@@ -18,13 +18,13 @@ public class ClientNoSetUpTest {
     private final Address addressB = new Address("street B");
 
     public void afterCreationShouldHaveNoAddress() {
-        Client client = new Client();
+        final Client client = new Client();
 
         assertEquals(client.getAddresses().size(), 0);
     }
 
     public void shouldAllowToAddAddress() {
-        Client client = new Client();
+        final Client client = new Client();
 
         client.addAddress(addressA);
 
@@ -33,7 +33,7 @@ public class ClientNoSetUpTest {
     }
 
     public void shouldAllowToAddManyAddresses() {
-        Client client = new Client();
+        final Client client = new Client();
 
         client.addAddress(addressA);
         client.addAddress(addressB);

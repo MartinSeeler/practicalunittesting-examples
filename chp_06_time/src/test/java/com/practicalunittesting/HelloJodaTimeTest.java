@@ -25,14 +25,14 @@ public class HelloJodaTimeTest {
     }
 
     public void shouldSayGoodMorningInTheMorning() {
-        Calendar now = Calendar.getInstance();
+        final Calendar now = Calendar.getInstance();
         now.set(Calendar.HOUR_OF_DAY, 9);
         DateTimeUtils.setCurrentMillisFixed(now.getTimeInMillis());
         assertEquals(hello.sayHello(), "Good Morning!");
     }
 
     public void shouldSayGoodAfternoonInTheAfternoon() {
-        Calendar now = Calendar.getInstance();
+        final Calendar now = Calendar.getInstance();
         now.set(Calendar.HOUR_OF_DAY, 18);
         DateTimeUtils.setCurrentMillisFixed(now.getTimeInMillis());
         assertEquals(hello.sayHello(), "Good Afternoon!");

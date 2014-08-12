@@ -25,7 +25,7 @@ public class TryCatchBDD {
         try {
             sut.methodWhichShouldThrowMyException();
         }
-        catch(Exception e) {
+        catch(final Exception e) {
             exception = e;
         }
 

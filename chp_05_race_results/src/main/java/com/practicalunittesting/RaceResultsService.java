@@ -13,17 +13,17 @@ public class RaceResultsService {
 
     private final Collection<Client> clients = new HashSet<Client>();
 
-    public void addSubscriber(Client client) {
+    public void addSubscriber(final Client client) {
         clients.add(client);
     }
 
-    public void send(Message message) {
-        for (Client client : clients) {
+    public void send(final Message message) {
+        for (final Client client : clients) {
             client.receive(message);
         }
     }
 
-    public void removeSubscriber(Client client) {
+    public void removeSubscriber(final Client client) {
         clients.remove(client);
     }
 }

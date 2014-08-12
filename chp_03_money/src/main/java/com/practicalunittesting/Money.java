@@ -10,7 +10,7 @@ public class Money   {
     private final int amount;
     private final String currency;
 
-    public Money(int amount, String currency) {
+    public Money(final int amount, final String currency) {
         if (amount < 0) {
             throw new IllegalArgumentException("illegal amount: [" + amount + "]");
         }
@@ -30,16 +30,16 @@ public class Money   {
         return currency;
     }
 
-    public boolean equals(Object anObject) {
+    public boolean equals(final Object anObject) {
         if (anObject instanceof Money) {
-            Money money= (Money)anObject;
+            final Money money= (Money)anObject;
             return money.getCurrency().equals(currency)
                     && amount == money.amount;
         }
         return false;
     }
 
-    public Money add(Money b) {
+    public Money add(final Money b) {
         // FIXME obviously flawed
         return new Money(this.amount + b.amount, this.currency);
     }

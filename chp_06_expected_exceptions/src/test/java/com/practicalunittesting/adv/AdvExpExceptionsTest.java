@@ -31,13 +31,13 @@ public class AdvExpExceptionsTest {
 
     @Test
     public void shouldNotProcessInvalidRequests() {
-        Request request = createInvalidRequest();
-        RequestProcessor requestProcessor = mock(RequestProcessor.class);
-        RequestHandler sut = new RequestHandler(requestProcessor);
+        final Request request = createInvalidRequest();
+        final RequestProcessor requestProcessor = mock(RequestProcessor.class);
+        final RequestHandler sut = new RequestHandler(requestProcessor);
         try {
             sut.handle(request);
             fail("Should have thrown InvalidRequestException");
-        } catch (InvalidRequestException e) {
+        } catch (final InvalidRequestException e) {
             Mockito.verifyZeroInteractions(requestProcessor);
         }
     }
@@ -51,7 +51,7 @@ public class AdvExpExceptionsTest {
     public void shouldNotProcessInvalidRequest() {
         try {
             sut.handle(request);
-        } catch (InvalidRequestException e) {
+        } catch (final InvalidRequestException e) {
         }
         Mockito.verifyZeroInteractions(requestProcessor);
     }
@@ -62,10 +62,10 @@ public class AdvExpExceptionsTest {
 
     @Test
     public void shouldThrowExceptions() throws InvalidRequestException {
-        Request request = createInvalidRequest();
-        RequestProcessor requestProcessor = mock(RequestProcessor.class);
+        final Request request = createInvalidRequest();
+        final RequestProcessor requestProcessor = mock(RequestProcessor.class);
 
-        RequestHandler sut = new RequestHandler(requestProcessor);
+        final RequestHandler sut = new RequestHandler(requestProcessor);
 
         catchException(sut).handle(request);
 

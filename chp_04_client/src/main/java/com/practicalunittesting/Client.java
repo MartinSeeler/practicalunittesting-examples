@@ -9,7 +9,7 @@ package com.practicalunittesting;
 public class Client {
     private int age;
 
-    public void setAge(int age) {
+    public void setAge(final int age) {
         this.age = age;
     }
 

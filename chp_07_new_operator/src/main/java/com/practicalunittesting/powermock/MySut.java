@@ -11,7 +11,7 @@ import com.practicalunittesting.MyCollaborator;
 public class MySut {
 
     public boolean myMethod() {
-        MyCollaborator collaborator = new MyCollaborator();
+        final MyCollaborator collaborator = new MyCollaborator();
         if (collaborator.someMethod()) {
             return true;
         }

@@ -17,11 +17,11 @@ public class SetEqualityTest {
 
     @Test
     public void twoSetsAreEqualsIfTheyHaveSameContent() {
-        Set<String> setA = new LinkedHashSet<String>();
-        Set<String> setB = new LinkedHashSet<String>();
+        final Set<String> setA = new LinkedHashSet<String>();
+        final Set<String> setB = new LinkedHashSet<String>();
 
-        String s1 = "s1";
-        String s2 = "s2";
+        final String s1 = "s1";
+        final String s2 = "s2";
 
         setA.add(s1);
         setA.add(s2);

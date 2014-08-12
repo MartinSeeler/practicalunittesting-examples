@@ -22,9 +22,9 @@ public class PIMTest {
 
     @Test
     public void shouldAddNewEventToCalendar() {
-        Calendar calendar = mock(Calendar.class);
-        PIM pim = new PIM(calendar);
-        Meeting expectedMeeting = new Meeting(START_DATE, END_DATE);
+        final Calendar calendar = mock(Calendar.class);
+        final PIM pim = new PIM(calendar);
+        final Meeting expectedMeeting = new Meeting(START_DATE, END_DATE);
 
         pim.addMeeting(START_DATE, ONE_HOUR);
 

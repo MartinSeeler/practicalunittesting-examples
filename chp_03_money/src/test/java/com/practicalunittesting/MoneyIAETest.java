@@ -26,12 +26,12 @@ public class MoneyIAETest {
     }
 
     @Test(dataProvider = "getInvalidAmount", expectedExceptions = IllegalArgumentException.class)
-    public void constructorShouldThrowIAEForInvalidAmount(int invalidAmount) {
-        Money money = new Money(invalidAmount, VALID_CURRENCY);
+    public void constructorShouldThrowIAEForInvalidAmount(final int invalidAmount) {
+        final Money money = new Money(invalidAmount, VALID_CURRENCY);
     }
 
     @Test(dataProvider = "getInvalidCurrency", expectedExceptions = IllegalArgumentException.class)
-    public void constructorShouldThrowIAEForInvalidCurrency(String invalidCurrency) {
-        Money money = new Money(VALID_AMOUNT, invalidCurrency);
+    public void constructorShouldThrowIAEForInvalidCurrency(final String invalidCurrency) {
+        final Money money = new Money(VALID_AMOUNT, invalidCurrency);
     }
 }

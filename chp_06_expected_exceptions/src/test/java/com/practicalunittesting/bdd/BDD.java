@@ -20,7 +20,7 @@ public class BDD {
     public void shouldThrowExceptions() throws MyException {
         catchException(sut).methodWhichShouldThrowMyException();
 
-        Exception e = caughtException();
+        final Exception e = caughtException();
 
         assertTrue(e instanceof MyException,
                 "Should have thrown exception of MyException class");

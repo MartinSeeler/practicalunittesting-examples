@@ -10,7 +10,7 @@ import com.practicalunittesting.MyCollaborator;
  */
 public class MySut {
 
-    public void myMethod(MyCollaborator collab) {
+    public void myMethod(final MyCollaborator collab) {
         // some behaviour worth testing here which uses collaborator
     }
 }

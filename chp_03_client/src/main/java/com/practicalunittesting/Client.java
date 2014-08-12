@@ -12,7 +12,7 @@ import java.util.List;
 public class Client {
     private final List<Address> addresses = new ArrayList<Address>();
 
-    public void addAddress(Address address) {
+    public void addAddress(final Address address) {
         addresses.add(address);
     }
 

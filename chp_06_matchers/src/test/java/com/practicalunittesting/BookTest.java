@@ -26,7 +26,7 @@ public class BookTest {
     
     public void booksWithSameTitlesShouldBeEqual() {
         book = new Book(TITLE);
-        Book otherBook = new Book(TITLE);
+        final Book otherBook = new Book(TITLE);
         assertEquals(book, otherBook);
     }
 }

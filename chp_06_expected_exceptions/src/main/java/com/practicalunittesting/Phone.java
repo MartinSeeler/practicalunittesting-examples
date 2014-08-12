@@ -9,7 +9,7 @@ package com.practicalunittesting;
 public class Phone {
     private final String number;
 
-    public Phone(String number) {
+    public Phone(final String number) {
         if (null == number || number.isEmpty()) {
             throw new IllegalArgumentException("number can not be null or empty");
         }

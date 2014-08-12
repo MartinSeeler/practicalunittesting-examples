@@ -27,14 +27,14 @@ public class PIMTest {
 
     @Test
     public void shouldAddNewEventToCalendar() {
-        Calendar calendar = mock(Calendar.class);
-        PIM pim = new PIM(calendar);
-        ArgumentCaptor<Meeting> argument = ArgumentCaptor.forClass(Meeting.class);
+        final Calendar calendar = mock(Calendar.class);
+        final PIM pim = new PIM(calendar);
+        final ArgumentCaptor<Meeting> argument = ArgumentCaptor.forClass(Meeting.class);
 
         pim.addMeeting(START_DATE, ONE_HOUR);
 
         verify(calendar).addEvent(argument.capture());
-        Meeting meeting = argument.getValue();
+        final Meeting meeting = argument.getValue();
         assertEquals(meeting.getStartDate(), START_DATE);
         assertEquals(meeting.getEndDate(), END_DATE);
     }

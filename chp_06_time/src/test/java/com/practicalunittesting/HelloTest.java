@@ -14,12 +14,12 @@ import static org.testng.Assert.assertEquals;
 public class HelloTest {
 
     public void shouldSayGoodMorningInTheMorning() {
-        Hello hello = new Hello();
+        final Hello hello = new Hello();
         assertEquals(hello.sayHello(), "Good Morning!");
     }
 
     public void shouldSayGoodAfternoonInTheAfternoon() {
-        Hello hello = new Hello();
+        final Hello hello = new Hello();
         assertEquals(hello.sayHello(), "Good Afternoon!");
     }
 }

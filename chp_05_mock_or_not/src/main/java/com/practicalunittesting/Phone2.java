@@ -10,7 +10,7 @@ public class Phone2 {
     private final boolean mobile;
     private final String number;
 
-    public Phone2(String number) {
+    public Phone2(final String number) {
      this.number = number;
      this.mobile = number.startsWith("+") && number.endsWith("9");
     }

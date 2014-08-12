@@ -13,7 +13,7 @@ public class Meeting implements Event {
     private final Date startDate;
     private final Date endDate;
 
-    public Meeting(Date startDate, Date endDate) {
+    public Meeting(final Date startDate, final Date endDate) {
         this.startDate = new Date(startDate.getTime());
         this.endDate = new Date(endDate.getTime());
     }
@@ -27,11 +27,11 @@ public class Meeting implements Event {
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(final Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Meeting meeting = (Meeting) o;
+        final Meeting meeting = (Meeting) o;
 
         if (endDate != null ? !endDate.equals(meeting.endDate) : meeting.endDate != null) return false;
         if (startDate != null ? !startDate.equals(meeting.startDate) : meeting.startDate != null) return false;

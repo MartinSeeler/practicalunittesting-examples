@@ -27,8 +27,8 @@ public class MySutTest {
 
     @Test
     public void testMyMethod() throws Exception {
-        MySut sut = new MySut();
-        MyCollaborator collaborator = mock(MyCollaborator.class);
+        final MySut sut = new MySut();
+        final MyCollaborator collaborator = mock(MyCollaborator.class);
 
         PowerMockito.whenNew(MyCollaborator.class).withNoArguments().thenReturn(collaborator);
         when(collaborator.someMethod()).thenReturn(true);

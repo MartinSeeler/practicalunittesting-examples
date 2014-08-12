@@ -12,7 +12,7 @@ public class MySut {
 
     private final MyCollaborator collab;
 
-    public MySut(MyCollaborator collab) {
+    public MySut(final MyCollaborator collab) {
         this.collab = collab;
     }
     public void myMethod() {

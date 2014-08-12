@@ -18,8 +18,8 @@ public class JVMUniqueIdGeneratorTest {
 	private final IdGenerator idGen = new JVMUniqueIdGenerator();
 
 	public void idsShouldBeUnique() {
-		Long idA = idGen.nextId();
-		Long idB = idGen.nextId();
+		final Long idA = idGen.nextId();
+		final Long idB = idGen.nextId();
 		assertNotEquals(idA, idB);
 	}
 }
