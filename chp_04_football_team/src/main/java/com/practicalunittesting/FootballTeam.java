@@ -22,6 +22,6 @@ public class FootballTeam implements Comparable<FootballTeam> {
 
     //@Override
     public int compareTo(FootballTeam otherTeam) {
-        return gamesWon - otherTeam.getGamesWon();
+        return gamesWon - otherTeam.gamesWon;
     }
 }

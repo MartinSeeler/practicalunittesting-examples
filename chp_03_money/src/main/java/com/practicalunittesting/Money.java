@@ -33,8 +33,8 @@ public class Money   {
     public boolean equals(Object anObject) {
         if (anObject instanceof Money) {
             Money money= (Money)anObject;
-            return money.getCurrency().equals(getCurrency())
-                    && getAmount() == money.getAmount();
+            return money.getCurrency().equals(currency)
+                    && amount == money.amount;
         }
         return false;
     }
