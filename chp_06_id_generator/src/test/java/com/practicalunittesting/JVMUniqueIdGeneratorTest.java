@@ -15,7 +15,7 @@ import static org.testng.Assert.assertNotEquals;
 @Test
 public class JVMUniqueIdGeneratorTest {
 
-	private IdGenerator idGen = new JVMUniqueIdGenerator();
+	private final IdGenerator idGen = new JVMUniqueIdGenerator();
 
 	public void idsShouldBeUnique() {
 		Long idA = idGen.nextId();

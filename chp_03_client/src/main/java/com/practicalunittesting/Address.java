@@ -8,7 +8,7 @@ package com.practicalunittesting;
  */
 public class Address {
 
-    private String street;
+    private final String street;
 
     public Address(String street) {
         this.street = street;

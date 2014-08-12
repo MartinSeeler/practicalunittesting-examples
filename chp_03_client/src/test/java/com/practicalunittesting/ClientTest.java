@@ -15,8 +15,8 @@ import static org.testng.Assert.assertTrue;
 @Test
 public class ClientTest {
 
-    private Address addressA = new Address("street A");
-    private Address addressB = new Address("street B");
+    private final Address addressA = new Address("street A");
+    private final Address addressB = new Address("street B");
     private Client client;
 
     @BeforeMethod

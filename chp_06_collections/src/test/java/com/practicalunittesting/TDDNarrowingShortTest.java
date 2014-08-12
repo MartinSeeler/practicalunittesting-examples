@@ -17,7 +17,7 @@ public class TDDNarrowingShortTest {
 
     class User {
 
-        private List<String> phones = new ArrayList<String>();
+        private final List<String> phones = new ArrayList<String>();
 
         public List<String> getPhones() {
         return phones;

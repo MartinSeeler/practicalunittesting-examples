@@ -7,7 +7,7 @@ package com.practicalunittesting;
  * @author Tomek Kaczanowski
  */
 public class FootballTeam implements Comparable<FootballTeam> {
-    private int gamesWon;
+    private final int gamesWon;
 
     public FootballTeam(int gamesWon) {
         if (gamesWon < 0) {

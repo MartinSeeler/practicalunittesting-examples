@@ -14,7 +14,7 @@ import static org.testng.Assert.assertEquals;
 @Test
 public class StubbingVoidTest {
 
-    private MyClass someObject = mock(MyClass.class);
+    private final MyClass someObject = mock(MyClass.class);
 
     public void stubbingTypicalVoidMethod() {
         when(someObject.someMethod()).thenReturn("some value");

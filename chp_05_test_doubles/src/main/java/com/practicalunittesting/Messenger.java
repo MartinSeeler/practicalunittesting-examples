@@ -8,8 +8,8 @@ package com.practicalunittesting.blah;
  */
 public class Messenger {
 
-    private TemplateEngine templateEngine;
-    private MailServer mailServer;
+    private final TemplateEngine templateEngine;
+    private final MailServer mailServer;
 
     public Messenger(MailServer mailServer, TemplateEngine templateEngine) {
         this.mailServer = mailServer;

@@ -14,8 +14,8 @@ import static org.testng.Assert.assertTrue;
 @Test
 public class ClientNoSetUpTest {
 
-    private Address addressA = new Address("street A");
-    private Address addressB = new Address("street B");
+    private final Address addressA = new Address("street A");
+    private final Address addressB = new Address("street B");
 
     public void afterCreationShouldHaveNoAddress() {
         Client client = new Client();

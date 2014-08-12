@@ -14,7 +14,7 @@ import static org.mockito.Mockito.verify;
 @Test
 public class FailedVerificationArgumentsTest {
 
-    private Car myFerrari = mock(Car.class);
+    private final Car myFerrari = mock(Car.class);
 
     @Test
     public void testVerificationFailureArguments() {

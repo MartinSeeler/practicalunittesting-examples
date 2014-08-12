@@ -15,7 +15,7 @@ import static org.testng.Assert.*;
 @Test
 public class FirstMockitoTest {
 
-    private Car myFerrari = mock(Car.class);
+    private final Car myFerrari = mock(Car.class);
 
     @Test
     public void testIfCarIsACar() {

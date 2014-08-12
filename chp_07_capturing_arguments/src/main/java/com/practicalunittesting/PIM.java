@@ -12,7 +12,7 @@ public class PIM {
 
     private final static int MILLIS_IN_MINUTE = 60 * 1000;
 
-    private Calendar calendar;
+    private final Calendar calendar;
 
     public PIM(Calendar calendar) {
         this.calendar = calendar;

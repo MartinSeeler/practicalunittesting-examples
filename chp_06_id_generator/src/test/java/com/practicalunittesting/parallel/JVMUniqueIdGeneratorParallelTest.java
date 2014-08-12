@@ -20,9 +20,9 @@ import static org.testng.Assert.assertTrue;
 @Test
 public class JVMUniqueIdGeneratorParallelTest {
 
-	private IdGenerator idGen = new JVMUniqueIdGenerator();
+	private final IdGenerator idGen = new JVMUniqueIdGenerator();
 
-	private Set<Long> ids = new HashSet<Long>(100);
+	private final Set<Long> ids = new HashSet<Long>(100);
 
 	@Test(threadPoolSize = 7, invocationCount = 100)
 	public void idsShouldBeUnique() {

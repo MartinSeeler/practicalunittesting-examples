@@ -15,7 +15,7 @@ import static org.testng.Assert.assertNotEquals;
 @Test
 public class SystemIdGeneratorTest {
 
-    private IdGenerator idGen = new SystemIdGenerator();
+    private final IdGenerator idGen = new SystemIdGenerator();
     
  	public void idsShouldBeUnique() {
 		Long idA = idGen.nextId();

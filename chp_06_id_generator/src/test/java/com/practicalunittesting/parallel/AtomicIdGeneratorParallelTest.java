@@ -20,8 +20,8 @@ import static org.testng.Assert.assertTrue;
 @Test
 public class AtomicIdGeneratorParallelTest {
 
-	private IdGenerator idGen = new AtomicIdGenerator();
-	private Set<Long> ids = new HashSet<Long>(100);
+	private final IdGenerator idGen = new AtomicIdGenerator();
+	private final Set<Long> ids = new HashSet<Long>(100);
 
 	@Test(threadPoolSize = 7, invocationCount = 1000, skipFailedInvocations = true)
 	public void idsShouldBeUnique() {

@@ -10,7 +10,7 @@ import java.util.List;
  * @author Tomek Kaczanowski
  */
 public class Client {
-    private List<Address> addresses = new ArrayList<Address>();
+    private final List<Address> addresses = new ArrayList<Address>();
 
     public void addAddress(Address address) {
         addresses.add(address);
