@@ -22,7 +22,7 @@ public class BDD {
 
         Exception e = caughtException();
 
-        assertTrue(caughtException() instanceof MyException,
+        assertTrue(e instanceof MyException,
                 "Should have thrown exception of MyException class");
 
     }
