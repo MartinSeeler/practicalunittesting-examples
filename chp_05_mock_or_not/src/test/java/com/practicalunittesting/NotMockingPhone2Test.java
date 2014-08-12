@@ -14,8 +14,8 @@ import static org.testng.Assert.assertTrue;
  */
 @Test
 public class NotMockingPhone2Test {
-    private final static Phone2 MOBILE_PHONE = new Phone2("+123456789");
-    private final static Phone2 STATIONARY_PHONE = new Phone2("123123123");
+    private static final Phone2 MOBILE_PHONE = new Phone2("+123456789");
+    private static final Phone2 STATIONARY_PHONE = new Phone2("123123123");
 
     private Client2 client;
 

@@ -8,10 +8,10 @@ package com.practicalunittesting;
  */
 public class DiscountCalculator {
 
-    private final static double THREE_PERCENT = 0.03d;
-    private final static double TWO_PERCENT = 0.02d;
-    private final static double ONE_PERCENT = 0.01d;
-    private final static double NO_DISCOUNT = 0.0d;
+    private static final double THREE_PERCENT = 0.03d;
+    private static final double TWO_PERCENT = 0.02d;
+    private static final double ONE_PERCENT = 0.01d;
+    private static final double NO_DISCOUNT = 0.0d;
 
     public static double calculateDiscount(double value) {
         if (value >= 5000) {

@@ -12,8 +12,8 @@ import org.testng.annotations.Test;
 @Test
 public class MoneyIAETest {
 
-    private final static int VALID_AMOUNT = 5;
-    private final static String VALID_CURRENCY = "USD";
+    private static final int VALID_AMOUNT = 5;
+    private static final String VALID_CURRENCY = "USD";
 
     @DataProvider
     private static final Object[][] getInvalidAmount(){

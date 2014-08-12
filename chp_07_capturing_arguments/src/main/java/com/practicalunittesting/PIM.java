@@ -10,7 +10,7 @@ import java.util.Date;
  */
 public class PIM {
 
-    private final static int MILLIS_IN_MINUTE = 60 * 1000;
+    private static final int MILLIS_IN_MINUTE = 60 * 1000;
 
     private final Calendar calendar;
 

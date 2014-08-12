@@ -18,8 +18,8 @@ import static org.testng.Assert.assertTrue;
  */
 @Test
 public class MockingTest {
-    private final static Phone MOBILE_PHONE = mock(Phone.class);
-    private final static Phone STATIONARY_PHONE = mock(Phone.class);
+    private static final Phone MOBILE_PHONE = mock(Phone.class);
+    private static final Phone STATIONARY_PHONE = mock(Phone.class);
 
     private Client client;
 

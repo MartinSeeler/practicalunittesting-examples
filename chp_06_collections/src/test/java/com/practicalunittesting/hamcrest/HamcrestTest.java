@@ -24,8 +24,8 @@ import static org.hamcrest.collection.IsMapContaining.hasKey;
 public class HamcrestTest {
 
     private Set<String> setA, setB;
-    private final static String S_1 = "s1";
-    private final static String S_2 = "s2";
+    private static final String S_1 = "s1";
+    private static final String S_2 = "s2";
 
     private Map<String, Object> map;
 

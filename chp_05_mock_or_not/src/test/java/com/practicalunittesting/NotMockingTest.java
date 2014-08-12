@@ -14,9 +14,9 @@ import static org.testng.Assert.assertTrue;
  */
 @Test
 public class NotMockingTest {
-    private final static String ANY_NUMBER = "999-888-777";
-    private final static Phone MOBILE_PHONE = new Phone(ANY_NUMBER, true);
-    private final static Phone STATIONARY_PHONE = new Phone(ANY_NUMBER, false);
+    private static final String ANY_NUMBER = "999-888-777";
+    private static final Phone MOBILE_PHONE = new Phone(ANY_NUMBER, true);
+    private static final Phone STATIONARY_PHONE = new Phone(ANY_NUMBER, false);
 
     private Client client;
 
