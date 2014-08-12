@@ -15,8 +15,8 @@ public class AddressParsingManyAsserts {
 
     public void testAddressParsing() {
         Address anAddress = new Address("ADDR1$CITY IL 60563$COUNTRY");
-        assertEquals("ADDR1",  anAddress.getAddr1());
-        assertEquals("CITY IL 60563",  anAddress.getCsp());
-        assertEquals("COUNTRY",  anAddress.getCountry());
+        assertEquals(anAddress.getAddr1(), "ADDR1");
+        assertEquals(anAddress.getCsp(), "CITY IL 60563");
+        assertEquals(anAddress.getCountry(), "COUNTRY");
     }
 }

@@ -22,14 +22,14 @@ public class AddressParsingOneAssert {
     }
 
     public void testAddr1() {
-        assertEquals("ADDR1",  anAddress.getAddr1());
+        assertEquals(anAddress.getAddr1(), "ADDR1");
     }
 
     public void testCsp() {
-        assertEquals("CITY IL 60563",  anAddress.getCsp());
+        assertEquals(anAddress.getCsp(), "CITY IL 60563");
     }
 
     public void testCountry() {
-        assertEquals("COUNTRY",  anAddress.getCountry());
+        assertEquals(anAddress.getCountry(), "COUNTRY");
     }
 }
