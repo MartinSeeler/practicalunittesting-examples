@@ -1,4 +1,4 @@
-package com.practicalunittesting.blah;
+package com.practicalunittesting;
 
 import org.testng.annotations.Test;
 

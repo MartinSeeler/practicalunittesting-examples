@@ -1,4 +1,4 @@
-package com.practicalunittesting.blah;
+package com.practicalunittesting;
 
 /**
  * Sample code for "Developers test: From beginner to master" book.

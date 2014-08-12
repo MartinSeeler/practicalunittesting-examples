@@ -1,4 +1,4 @@
-package com.practicalunittesting.blah;
+package com.practicalunittesting;
 
 /**
  * Practical Unit Testing with TestNG and Mockito - source code for examples.
