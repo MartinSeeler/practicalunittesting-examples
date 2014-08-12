@@ -1,4 +1,4 @@
-package com.practicalunittesting.com;
+package com.practicalunittesting;
 
 import com.practicalunittesting.DiscountCalculator;
 import jxl.Sheet;
