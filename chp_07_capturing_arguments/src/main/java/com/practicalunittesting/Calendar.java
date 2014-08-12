@@ -8,5 +8,5 @@ package com.practicalunittesting;
  */
 public interface Calendar {
 
-    public void addEvent(Meeting meeting);
+    void addEvent(Meeting meeting);
 }
